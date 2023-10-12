@@ -1,0 +1,41 @@
+<mvc:View controllerName="ordersmgtnsp.workflowuimodule.controller.App"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:smartForm="sap.ui.comp.smartform"
+    xmlns:smartField="sap.ui.comp.smartfield"
+    xmlns="sap.m">
+    <App id="app">
+     <Page id = "scroll">
+        <content>
+        <form:SimpleForm id="request-information-form" editable="false" layout="ResponsiveGridLayout" singleContainerFullSize="false">
+            <form:content>
+                <core:Title id="vacation-timerange-heading" text="A new order has been received. Please review and confirm whether the requirements can be met or not."/>
+                <Label id="salesorder-label" text="Sales Order" labelFor="salesorder-field"/>
+                <Input id="salesorder-field" value="{context>/salesOrder}" editable="false"/> 
+                <Label id="organization-label" text="Organization" labelFor="organization-field"/>
+                <Input id="organization-field" value="{context>/organization}" editable="false"/> 
+                <Label id="distributionChannel-label" text="Distribution Channel" labelFor="distributionChannel-field"/>
+                <Input id="distributionChannel-field" value="{context>/distributionChannel}" editable="false"/> 
+                <Label id="division-label" text="Division" labelFor="division-field"/>
+                <Input id="division-field" value="{context>/division}" editable="false"/> 
+                <Label id="netValue-label" text="Net Value" labelFor="netValue-field"/>
+                <Input id="netValue-field" value="{context>/netValue}" editable="false"/>
+                <Label id="billingBlock-label" text="Billing Block" labelFor="billingBlock-field"/>
+                <Input id="billingBlock-field" value="{context>/billingBlock}" editable="false"/> 
+            </form:content>
+        </form:SimpleForm>
+
+        <html:hr></html:hr>
+        <FlexBox id="comment-wrapper" direction="Column" class="sapUiSmallMargin" width="auto">
+            <CheckBox id="Ack" text="I acknowledge that we have received your order and will process it based on the availability" />
+            <Label id="comment-label" text="Comment" />
+            <TextArea id="comment-field" showExceededText="true" maxLength="1000" width="100%" height="120px" value="{context>/comment}"/>
+        </FlexBox>
+        </content>
+    </Page>
+    </App>
+</mvc:View>
