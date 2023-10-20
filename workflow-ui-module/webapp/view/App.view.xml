@@ -26,6 +26,7 @@
                 <Input id="netValue-field" value="{context>/netValue}" editable="false"/>
                 <Label id="billingBlock-label" text="Billing Block" labelFor="billingBlock-field"/>
                 <Input id="billingBlock-field" value="{context>/billingBlock}" editable="false"/> 
+            
             </form:content>
         </form:SimpleForm>
 
