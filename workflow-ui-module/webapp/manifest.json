@@ -170,7 +170,7 @@
                 "netValue": {
                     "type": "string",
                     "title": "Net Value",
-                    "description": "Net Value"
+                    "description": "Amount"
                 },
                 "billingBlock": {
                     "type": "string",
