@@ -155,7 +155,7 @@
                 "organization": {
                     "type": "string",
                     "title": "Organization",
-                    "description": "Organization"
+                    "description": "Sales Organization"
                 },
                 "distributionChannel": {
                     "type": "string",
